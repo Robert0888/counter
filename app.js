@@ -17,7 +17,7 @@ function timer() {
     dayEl.innerText = days
     hrsEl.innerText = hrs
     minsEl.innerText = time(mins)
-    secEl.innerText = sec
+    secEl.innerText = time(sec)
 }
 
 timer()
@@ -27,8 +27,9 @@ setInterval(timer, 1000)
 
 function time(c) {
     if (c < 10) {
-        return 0`${c}`
+        return (`0${c}`)
     } else {
         return c
     }
+        // return c < 10 ? (`0${c}`) : c;
 }
